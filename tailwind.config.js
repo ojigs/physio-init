@@ -32,7 +32,7 @@ module.exports = {
         "hero-pattern":
           "linear-gradient(rgba(26, 37, 48, 0.45), rgba(26, 37, 48, 0.9)), url('/assets/images/physio-bg-blue.webp')",
         "cta-pattern":
-          "linear-gradient(rgba(26, 37, 48, 0.3), rgba(26, 37, 48, 0.8)), url('/assets/images/physio-bg-black.webp')",
+          "linear-gradient(rgba(26, 37, 48, 0.5), rgba(26, 37, 48, 0.95)), url('/assets/images/physio-bg-black.webp')",
       },
       animation: {
         "fade-in": "fadeIn 0.8s ease-in-out",
