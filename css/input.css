@@ -1,3 +1,272 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles beyond Tailwind CSS */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate elements as they scroll into view */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulse animation for accent elements */
+.pulse-accent {
+  animation: pulseAccent 2s infinite;
+}
+
+@keyframes pulseAccent {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 127, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 127, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 127, 80, 0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a90e2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a7bc8;
+}
+
+/* Add a bit of padding to account for fixed header */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Additional styles for the process timeline */
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 100%;
+  height: 20px;
+  width: 2px;
+  background: rgba(255, 127, 80, 0.5);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(74, 144, 226, 0.8),
+    rgba(255, 127, 80, 0.8)
+  );
+  opacity: 0.85;
+  z-index: 0;
+}
+
+/* Image grid for service categories */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+}
+
+/* Glass morphism effect for cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* recla */
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.fade-in {
+  transform: translateY(20px);
+}
+
+.animate-on-scroll.slide-left {
+  transform: translateX(-20px);
+}
+
+.animate-on-scroll.slide-right {
+  transform: translateX(20px);
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Header on Scroll */
+.header-scrolled {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Effects */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tab System */
+.solution-tab.active {
+  background-color: #37b6bd;
+  color: white;
+}
+
+.solution-content {
+  display: none;
+}
+
+.solution-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Form Focus Styles */
+.form-input:focus {
+  border-color: #37b6bd;
+  box-shadow: 0 0 0 3px rgba(55, 182, 189, 0.2);
+}
+
+/* Floating CTA */
+.floating-cta {
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease-in-out;
+  z-index: 40;
+}
+
+.floating-cta.visible {
+  bottom: 0;
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Utility for screenreaders */
+.focus-visible:focus {
+  outline: 2px solid #37b6bd;
+  outline-offset: 2px;
+}
