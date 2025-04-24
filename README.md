@@ -1,4 +1,4 @@
-# MMS Physio-Exercises
+# MMS Physio-Exercises Landing page
 
 (...in progress)
 
