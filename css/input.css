@@ -210,7 +210,7 @@ section {
 
 /* Tab System */
 .solution-tab.active {
-  background-color: #37b6bd;
+  background-color: #0886af;
   color: white;
 }
 
@@ -225,7 +225,7 @@ section {
 
 /* Form Focus Styles */
 .form-input:focus {
-  border-color: #37b6bd;
+  border-color: #0886af;
   box-shadow: 0 0 0 3px rgba(55, 182, 189, 0.2);
 }
 
@@ -267,6 +267,6 @@ section {
 
 /* Utility for screenreaders */
 .focus-visible:focus {
-  outline: 2px solid #37b6bd;
+  outline: 2px solid #0886af;
   outline-offset: 2px;
 }

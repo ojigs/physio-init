@@ -82,11 +82,11 @@
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-8">
                         <div
-                            class="inline-block px-3 py-1 bg-accent/20 text-accent-hover rounded-full mb-4 animate-fade-in">
+                            class="inline-block px-3 py-1 bg-accent/20 text-primary-300 rounded-full mb-4 animate-fade-in">
                             Enterprise Virtual Reality Rehabilitation
                         </div>
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-heading animate-fade-in">
-                            Transform <span class="text-accent">patient recovery</span> through immersive VR
+                            Transform <span class="text-primary-300">patient recovery</span> through immersive VR
                         </h1>
                         <p class="text-xl mb-8 animate-slide-up text-gray-200">
                             MMS Physio-Exercises delivers a complete platform for healthcare organizations, enabling
@@ -105,23 +105,24 @@
                             </a>
                         </div>
                         <div class="mt-8 pt-6 border-t border-white/20 animate-slide-up" style="animation-delay: 0.4s;">
-                            <p class="text-sm text-gray-300 mb-2">Trusted by leading healthcare institutions:</p>
-                            <div class="flex flex-wrap gap-4 items-center">
+                            <p class="text-sm text-gray-300 mb-2 text-center sm:text-start">Trusted by leading
+                                healthcare institutions:</p>
+                            <div class="flex flex-wrap gap-4 items-center justify-center sm:justify-normal">
                                 <div class="bg-white/10 px-3 py-2 rounded flex items-center">
                                     <img src="assets/images/mayo-clinic.png" alt="Mayo Clinic Logo"
-                                        class="h-4 w-auto" />
+                                        class="h-6 w-auto" />
                                 </div>
                                 <div class="bg-white/10 px-3 py-2 rounded flex items-center">
                                     <img src="assets/images/cleveland-clinic.png" alt="Cleveland Clinic Logo"
-                                        class="h-4 w-auto" />
+                                        class="h-6 w-auto" />
                                 </div>
                                 <div class="bg-white/10 px-3 py-2 rounded flex items-center">
                                     <img src="assets/images/mount-sinai.png" alt="Mount Sinai Logo"
-                                        class="h-4 w-auto" />
+                                        class="h-6 w-auto" />
                                 </div>
                                 <div class="bg-white/10 px-3 py-2 rounded flex items-center">
                                     <img src="assets/images/john-hopkins.png" alt="Johns Hopkins Logo"
-                                        class="h-4 w-auto" />
+                                        class="h-6 w-auto" />
                                 </div>
                             </div>
                         </div>
@@ -276,28 +277,49 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto text-center">
                     <div class="text-accent mb-2 font-medium animate-on-scroll fade-in">SEE IT IN ACTION</div>
-                    <h2 class="text-3xl font-semibold mb-6 font-heading animate-on-scroll fade-in">Watch how MMS
-                        Physio-Exercises
-                        transforms rehabilitation</h2>
-                    <p class="text-gray-600 mb-8 animate-on-scroll fade-in">Our platform enables patients to engage in
-                        immersive therapy sessions while practitioners monitor progress in real-time.</p>
+                    <h2 class="text-3xl font-semibold mb-6 font-heading animate-on-scroll fade-in">
+                        Watch how MMS Physio-Exercises transforms rehabilitation
+                    </h2>
+                    <p class="text-gray-600 mb-8 animate-on-scroll fade-in">
+                        Our platform enables patients to engage in immersive therapy sessions while practitioners
+                        monitor progress in real-time.
+                    </p>
                 </div>
 
                 <div
-                    class="rounded-xl overflow-hidden shadow-lg animate-on-scroll fade-in bg-dark relative aspect-video max-w-4xl mx-auto">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div
-                            class="bg-accent/90 rounded-full w-20 h-20 flex items-center justify-center cursor-pointer hover:bg-accent transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
+                    class="relative aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg animate-on-scroll fade-in group bg-dark">
                     <img src="assets/images/physio-img-3.webp" alt="Video thumbnail showing VR physiotherapy session"
-                        class="w-full opacity-50">
+                        class="w-full h-full object-cover object-top opacity-50">
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button id="play-button" class="relative w-20 h-20 flex items-center justify-center">
+                            <span
+                                class="absolute w-full h-full rounded-full border-2 border-accent animate-ping-slow"></span>
+                            <span
+                                class="absolute w-full h-full rounded-full border-2 border-accent/50 animate-ping-slower"></span>
+                            <div
+                                class="relative z-10 bg-accent/90 rounded-full w-20 h-20 flex items-center justify-center hover:bg-accent transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="video-modal"
+                class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                <div class="relative w-full max-w-4xl px-4" id="modal-content">
+                    <div class="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/video_id?autoplay=1"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <button id="close-modal"
+                        class="absolute -top-4 right-2 text-white text-3xl font-bold">&times;</button>
                 </div>
             </div>
         </section>
@@ -512,12 +534,20 @@
         <section id="dashboard" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-semibold text-center mb-6 font-heading">Powerful Analytics Dashboard</h2>
-                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Monitor patient progress, track outcomes,
-                    and make data-driven decisions with our comprehensive analytics platform.</p>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+                    Monitor patient progress, track outcomes, and make data-driven decisions with our comprehensive
+                    analytics platform.
+                </p>
 
                 <div class="bg-light p-6 rounded-lg shadow-lg">
-                    <img src="assets/images/physio-dashboard-1.avif" alt="Analytics Dashboard"
-                        class="rounded-md w-full border border-gray-200 shadow-sm">
+                    <div class="rounded-md overflow-hidden border border-gray-300 shadow-sm">
+                        <div class="bg-gray-100 px-2 sm:px-4 py-2 sm:py-3 flex items-center space-x-1 sm:space-x-2">
+                            <span class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400"></span>
+                            <span class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400"></span>
+                        </div>
+                        <img src="assets/images/physio-dashboard-1.avif" alt="Analytics Dashboard" class="w-full" />
+                    </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                         <div class="bg-white p-4 rounded-md shadow-sm border border-gray-100">
@@ -541,10 +571,12 @@
                 <div class="mt-12 text-center">
                     <a href="#contact"
                         class="bg-accent text-white font-medium px-6 py-3 rounded-md hover:bg-accent-hover transition-colors inline-block">Schedule
-                        a Demo</a>
+                        a Demo
+                    </a>
                 </div>
             </div>
         </section>
+
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="py-20 bg-accent/5">
@@ -568,24 +600,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-                        <div class="bg-white p-4 rounded-lg shadow-sm text-center font-bold text-gray-700">Mayo Clinic
-                        </div>
-                    </div>
-                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-                        <div class="bg-white p-4 rounded-lg shadow-sm text-center font-bold text-gray-700">Cleveland
-                            Clinic</div>
-                    </div>
-                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-                        <div class="bg-white p-4 rounded-lg shadow-sm text-center font-bold text-gray-700">Mount Sinai
-                        </div>
-                    </div>
-                    <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-                        <div class="bg-white p-4 rounded-lg shadow-sm text-center font-bold text-gray-700">Johns Hopkins
-                        </div>
-                    </div>
-                </div> -->
                 <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
                     <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
                         <div class="bg-white p-4 rounded-lg shadow-sm flex justify-center items-center h-24">

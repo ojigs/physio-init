@@ -5,21 +5,21 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: "#e6f7f8",
-          100: "#ccefef",
-          200: "#99dfdf",
-          300: "#66cfcf",
-          400: "#33bfbf",
-          500: "#37B6BD",
-          600: "#2c9299",
-          700: "#216d73",
-          800: "#16494c",
-          900: "#0b2426",
+          50: "#e3f6fb",
+          100: "#c2eaf6",
+          200: "#91daee",
+          300: "#5fc9e6",
+          400: "#2eb8de",
+          500: "#0886af",
+          600: "#066d8d",
+          700: "#05546a",
+          800: "#033a48",
+          900: "#012126",
         },
-        secondary: "#2c3e50",
+        secondary: "#025774",
         accent: {
-          DEFAULT: "#37B6BD",
-          hover: "#2c9299",
+          DEFAULT: "#0886af",
+          hover: "#066d8d",
         },
         light: "#f8f9fa",
         dark: "#1a2530",
@@ -38,6 +38,8 @@ module.exports = {
         "fade-in": "fadeIn 0.8s ease-in-out",
         "slide-up": "slideUp 0.6s ease-out",
         "slide-in": "slideIn 0.6s ease-out",
+        "ping-slow": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "ping-slower": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
         fadeIn: {

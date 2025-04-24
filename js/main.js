@@ -144,4 +144,43 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Video modal functionality
+  const modal = document.getElementById("video-modal");
+  const playBtn = document.getElementById("play-button");
+  const closeBtn = document.getElementById("close-modal");
+
+  function openModal() {
+    modal.classList.remove("pointer-events-none");
+    setTimeout(() => {
+      modal.classList.add("opacity-100");
+      modal.classList.remove("opacity-0");
+    }, 10);
+  }
+
+  function closeModal() {
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0");
+    playBtn.blur();
+    setTimeout(() => {
+      modal.classList.add("pointer-events-none");
+      const iframe = modal.querySelector("iframe");
+      iframe.src = iframe.src;
+    }, 300);
+  }
+
+  playBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
 });
