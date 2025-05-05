@@ -5,5 +5,5 @@
 Tailwind CLI Build Command
 
 ```bash
-npx tailwindcss -i ./src/input.css -o ./src/output.css --watch --minify
+npx tailwindcss -i ./css/input.css -o ./css/output.css --watch --minify
 ```
